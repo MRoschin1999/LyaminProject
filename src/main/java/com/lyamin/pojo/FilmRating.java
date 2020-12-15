@@ -1,12 +1,10 @@
 package com.lyamin.pojo;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.Objects;
 
-@Getter(lazy = true) @Setter @NoArgsConstructor
+@Data
 public class FilmRating {
     private long filmID;
     private Rating rating;

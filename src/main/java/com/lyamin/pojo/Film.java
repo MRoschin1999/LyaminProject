@@ -1,12 +1,12 @@
 package com.lyamin.pojo;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Objects;
 
-@Getter(lazy = true) @Setter @NoArgsConstructor
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Film {
     private long id;
     private String name;
