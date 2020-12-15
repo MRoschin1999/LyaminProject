@@ -1,34 +1,18 @@
 package com.lyamin.pojo;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 import java.util.Objects;
 
+@Getter(lazy = true) @Setter @NoArgsConstructor
 public class FilmRating {
     private long filmID;
     private Rating rating;
 
-    public  FilmRating(){
-
-    }
-
     public FilmRating(long filmID, Rating rating) {
         this.filmID = filmID;
-        this.rating = rating;
-    }
-
-
-    public long getFilmID() {
-        return filmID;
-    }
-
-    public void setFilmID(long filmID) {
-        this.filmID = filmID;
-    }
-
-    public Rating getRating() {
-        return rating;
-    }
-
-    public void setRating(Rating rating) {
         this.rating = rating;
     }
 
@@ -37,11 +21,11 @@ public class FilmRating {
         if (this == o) return true;
         if (!(o instanceof FilmRating)) return false;
         FilmRating that = (FilmRating) o;
-        return getFilmID() == that.getFilmID();
+        return filmID == that.filmID;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getFilmID());
+        return Objects.hash(filmID);
     }
 }
