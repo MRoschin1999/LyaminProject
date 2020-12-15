@@ -1,5 +1,8 @@
 package com.lyamin.pojo;
 
+import lombok.Getter;
+
+@Getter(lazy = true)
 public enum Rating {
     ZERO(0),
     ONE(1),
@@ -17,9 +20,5 @@ public enum Rating {
 
     Rating(int val) {
         this.val = val;
-    }
-
-    public int getVal() {
-        return val;
     }
 }
