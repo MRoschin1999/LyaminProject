@@ -6,7 +6,7 @@ import lombok.Setter;
 
 import java.util.Objects;
 
-@Getter(lazy = true) @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor
 public class FilmRating {
     private long filmID;
     private Rating rating;

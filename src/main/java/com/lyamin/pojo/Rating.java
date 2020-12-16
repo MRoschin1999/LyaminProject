@@ -2,7 +2,7 @@ package com.lyamin.pojo;
 
 import lombok.Getter;
 
-@Getter(lazy = true)
+@Getter
 public enum Rating {
     ZERO(0),
     ONE(1),
