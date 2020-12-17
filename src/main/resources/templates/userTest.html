@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Test</h1>
+    <div>
+
+        <div class="film">
+            <span th:text="${film.getImdbTitleId()}"></span>
+        </div>
+        <h1>Новый чат для желания [[${wishInfo}]] для пользователя [[${username}]]</h1>
+        <form th:action="@{/addFilm/{id}(id=${film.getImdbTitleId()})}" method="post">
+            <div class="rating">
+                <input class="form-control" type="number" step="1" max="10" name="rating"/>
+            </div>
+            <div class="button_panel">
+                <div>
+                    <button type="submit" class="btn">Создать</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
