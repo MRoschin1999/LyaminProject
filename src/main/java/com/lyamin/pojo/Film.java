@@ -11,6 +11,7 @@ public class Film {
     private long id;
     private String name;
     private String genre;
+    private String preview;
     private float avgRating;
 
     @Override
