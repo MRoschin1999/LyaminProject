@@ -5,9 +5,11 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Objects;
 
 @Entity
+@Table(name = "_user")
 @Getter @Setter
 public class User {
     @Id
