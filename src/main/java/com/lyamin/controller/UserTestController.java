@@ -13,7 +13,7 @@ public class UserTestController {
     public String filmPage(Model model, @PathVariable Integer filmId){
         Film film;
         //сходили в базу взялми фильм
-        model.addAllAttributes("film", film);
+//        model.addAllAttributes("film", film);
         return "userTest";
     }
 
