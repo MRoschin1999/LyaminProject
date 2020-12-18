@@ -9,23 +9,22 @@ import java.util.Objects;
 
 @Entity
 @Getter @Setter
+@Table(name="film")
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private long id;
+    private String imdbTitleId;
     private String name;
-    private String genre;
     private String preview;
     private float avgRating;
-    private int userRating;
 
-    public Film(long id, String name, String genre, String preview, float avgRating, int userRating) {
+    public Film(long id, String name, String imdbTitleId, String preview, float avgRating) {
         this.id = id;
         this.name = name;
-        this.genre = genre;
+        this.imdbTitleId = imdbTitleId;
         this.preview = preview;
         this.avgRating = avgRating;
-        this.userRating = userRating;
     }
 
     public Film() {
