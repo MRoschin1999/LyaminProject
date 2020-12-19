@@ -17,6 +17,8 @@ public class FilmRating {
     @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "_user_id")
     private User user;
+    @Column(name = "imdb_title_id")
+    private String imdbTitleId;
     private int rating;
 
     public FilmRating(long id, Film film, User user, int rating) {
@@ -24,6 +26,7 @@ public class FilmRating {
         this.film = film;
         this.user = user;
         this.rating = rating;
+        this.imdbTitleId = film.getImdbTitleId();
     }
 
     public FilmRating(){

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
     <head>
         <meta charset="UTF-8" />
         <title>Welcome</title>
@@ -7,7 +7,9 @@
     </head>
     <body>
         <h1>Welcome</h1>
-<!--        <a th:href="test/{id}"-->
+        <form th:action="@{/userTest/startTest}" method="post" >
+            <button type="submit" class="btn">Начать тест</button>
+        </form>
     </body>
 
 </html>
